@@ -3,9 +3,13 @@ from mnemonic import Mnemonic
 from eth_account import Account
 from web3 import Web3
 import time
+import logging
 import pickle
 import os
 from concurrent.futures import ThreadPoolExecutor
+
+# Настройка логирования
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Включаем HDWallet функции
 Account.enable_unaudited_hdwallet_features()
